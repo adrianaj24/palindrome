@@ -16,7 +16,7 @@ class App extends Component {
 
   handleSubmit(event) {
     let str = this.state.value;
-    let newStr = this.state.value.toLowerCase();
+    let newStr = this.state.value.toLowerCase().replace(/\s/g, "");
     console.log(newStr);
     event.preventDefault();
     let checkPalindrome;
