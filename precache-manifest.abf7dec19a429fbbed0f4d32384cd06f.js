@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "18e129ff258d814ca2517d19651eef12",
+    "revision": "0f16237ecc15c6b168fe6d19383810f2",
     "url": "/palindrome/index.html"
   },
   {
-    "revision": "ac2e5ec727ff28a335ea",
+    "revision": "805410534e35ea3ac1dd",
     "url": "/palindrome/static/css/main.ef115fb7.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/palindrome/static/js/2.953543a4.chunk.js"
   },
   {
-    "revision": "ac2e5ec727ff28a335ea",
-    "url": "/palindrome/static/js/main.e3b2d9b0.chunk.js"
+    "revision": "805410534e35ea3ac1dd",
+    "url": "/palindrome/static/js/main.6d6d133e.chunk.js"
   },
   {
     "revision": "09fbbd793702cc248b68",
