@@ -9,22 +9,27 @@ class App extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.clearInputField = this.clearInputField.bind(this);
   }
   handleChange(event) {
     this.setState({ value: event.target.value });
   }
 
   handleSubmit(event) {
-    let str = this.state.value.toLowerCase();
-    console.log(str)
+    let str = this.state.value;
+    let newStr = this.state.value.toLowerCase();
     event.preventDefault();
     let checkPalindrome;
     !str
       ? this.setState({ alert: "Please Enter Text" })
       : (checkPalindrome =
-          [...str].reduce((previous, next) => next + previous) === str
+          [...newStr].reduce((previous, next) => next + previous) === str
             ? this.setState({ alert: `${str} is a Palindrome :)` })
             : this.setState({ alert: `${str} is not a Palindrome :(` }));
+  }
+
+  clearInputField() {
+    document.getElementById("text-input").reset();
   }
 
   render() {
@@ -34,7 +39,11 @@ class App extends Component {
           <img src={tacocat} className="cat-image" alt="logo" />
           <h1 className="alert">{this.state.alert}</h1>
           <p>IS IT A PALINDROME?</p>
-          <form className="pali-check" onSubmit={this.handleSubmit}>
+          <form
+            className="pali-check"
+            id="text-input"
+            onSubmit={this.handleSubmit}
+          >
             <input
               className="text-input"
               type="text"
@@ -46,7 +55,7 @@ class App extends Component {
               className="submit-button"
               type="submit"
               value="Submit"
-              // onClick={this.handleSubmit}
+              onClick={this.clearInputField}
             />
           </form>
         </header>
