@@ -5,7 +5,7 @@ import "./App.css";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { value: "" };
+    this.state = { value: "", alert: "" };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,8 +22,8 @@ class App extends Component {
       ? alert("Invalid-Input")
       : (checkPalindrome =
           [...str].reduce((previous, next) => next + previous) === str
-            ? alert(`${str}: is a Palindrome :)`)
-            : alert(`${str}: is not a Palindrome :(`));
+            ? this.setState({ alert: `${str} is a Palindrome :)` })
+            : this.setState({ alert: `${str} is not a Palindrome :(` }));
   }
 
   render() {
@@ -31,8 +31,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={tacocat} className="cat-image" alt="logo" />
+          <h1 className="alert">{this.state.alert}</h1>
           <p>IS IT A PALINDROME?</p>
-          <form className="pali-check">
+          <form className="pali-check" onSubmit={this.handleSubmit}>
             <input
               className="text-input"
               type="text"
@@ -44,7 +45,7 @@ class App extends Component {
               className="submit-button"
               type="submit"
               value="Submit"
-              onClick={this.handleSubmit}
+              // onClick={this.handleSubmit}
             />
           </form>
         </header>
