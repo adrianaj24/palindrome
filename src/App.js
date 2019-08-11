@@ -14,6 +14,18 @@ class App extends Component {
     this.setState({ value: event.target.value });
   }
 
+  handleSubmit(event) {
+    let str = this.state.value;
+    event.preventDefault();
+    let checkPalindrome;
+    !str
+      ? alert("Invalid-Input")
+      : (checkPalindrome =
+          [...str].reduce((previous, next) => next + previous) === str
+            ? alert(`${str}: is a Palindrome :)`)
+            : alert(`${str}: is not a Palindrome :(`));
+  }
+
   render() {
     return (
       <div className="App">
