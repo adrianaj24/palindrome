@@ -16,6 +16,7 @@ class App extends Component {
 
   handleSubmit(event) {
     let str = this.state.value.toLowerCase();
+    console.log(str)
     event.preventDefault();
     let checkPalindrome;
     !str
