@@ -14,10 +14,10 @@ class App extends Component {
     this.setState({ value: event.target.value });
   }
 
+  //function to check if there are spaces/no text entered into input field, and checks if text is a palindrome
   handleSubmit(event) {
     let str = this.state.value;
     let newStr = this.state.value.toLowerCase().replace(/\s/g, "");
-    console.log(newStr.length);
     event.preventDefault();
     let checkPalindrome;
     !str || newStr.length === 0
