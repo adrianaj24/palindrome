@@ -19,7 +19,7 @@ class App extends Component {
     event.preventDefault();
     let checkPalindrome;
     !str
-      ? alert("Invalid-Input")
+      ? this.setState({ alert: "Please Enter Text" })
       : (checkPalindrome =
           [...str].reduce((previous, next) => next + previous) === str
             ? this.setState({ alert: `${str} is a Palindrome :)` })
