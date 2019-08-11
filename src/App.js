@@ -17,10 +17,10 @@ class App extends Component {
   handleSubmit(event) {
     let str = this.state.value;
     let newStr = this.state.value.toLowerCase().replace(/\s/g, "");
-    console.log(newStr);
+    console.log(newStr.length);
     event.preventDefault();
     let checkPalindrome;
-    !str
+    !str || newStr.length === 0
       ? this.setState({ alert: "Please Enter Text" })
       : (checkPalindrome =
           [...newStr].reduce((previous, next) => next + previous) === newStr
