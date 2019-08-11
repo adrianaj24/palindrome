@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3dc79fe82efc2777bb214cdb592e66dc",
+    "revision": "00fcd80200565c43218e9330f37b844b",
     "url": "/palindrome/index.html"
   },
   {
